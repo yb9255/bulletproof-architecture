@@ -2,13 +2,15 @@ import { MainLayout } from '@/components/layouts';
 import GlobalNavBar from '@/components/GlobalNavBar';
 import { Spinner } from '@/components/ui/spinner';
 import { Suspense } from 'react';
-import { Outlet } from 'react-router';
+import { Outlet, useLocation } from 'react-router';
 
 const AppRoot = () => {
+  const location = useLocation();
+
   return (
     <MainLayout>
       <GlobalNavBar />
-      <Suspense fallback={<Spinner />}>
+      <Suspense fallback={<Spinner />} key={location.key}>
         <Outlet />
       </Suspense>
     </MainLayout>

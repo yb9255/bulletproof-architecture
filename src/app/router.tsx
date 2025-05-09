@@ -3,6 +3,7 @@ import { ROUTE_CONSTANTS } from '@/config/path';
 import AppRoot from './routes/app/root';
 import PostsRoute from './routes/app/posts/posts';
 import UsersRoute from './routes/app/users/users';
+import PostRoute from './routes/app/posts/post';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
           },
           {
             path: ':postId',
-            element: <div>Post</div>,
+            element: <PostRoute />,
           },
         ],
       },
