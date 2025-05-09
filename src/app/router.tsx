@@ -4,6 +4,7 @@ import AppRoot from './routes/app/root';
 import PostsRoute from './routes/app/posts/posts';
 import UsersRoute from './routes/app/users/users';
 import PostRoute from './routes/app/posts/post';
+import UserRoute from './routes/app/users/user';
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
           },
           {
             path: ':userId',
-            element: <div>User</div>,
+            element: <UserRoute />,
           },
         ],
       },
