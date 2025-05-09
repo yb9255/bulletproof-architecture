@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import { ROUTE_CONSTANTS } from '@/config/path';
 import AppRoot from './routes/app/root';
+import PostsRoute from './routes/app/posts';
 
 const router = createBrowserRouter([
   {
@@ -12,7 +13,7 @@ const router = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <div>Posts</div>,
+            element: <PostsRoute />,
           },
           {
             path: ':postId',
