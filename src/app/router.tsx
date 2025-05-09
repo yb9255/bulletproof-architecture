@@ -1,7 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import { ROUTE_CONSTANTS } from '@/config/path';
 import AppRoot from './routes/app/root';
-import PostsRoute from './routes/app/posts';
+import PostsRoute from './routes/app/posts/posts';
+import UsersRoute from './routes/app/users/users';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <div>Users</div>,
+            element: <UsersRoute />,
           },
           {
             path: ':userId',
